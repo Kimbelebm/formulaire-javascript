@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+    <!DOCTYPE html>
+    <html>
+        <html>
+            <head>
+               <script> 
+                  function validateForm()                                 
+                  { 
+                      var name = document.forms["myForm"]["name"];         
+                      if (name.value == ""){ 
+                          document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
+                          name.focus(); 
+                          return false; 
+                      }else{
+                          document.getElementById('errorname').innerHTML="";  
+                      }
+                  }
+               </script> 
+               <style>
+                  .error{
+                     color: #D8000C;
+                     background-color: #FFBABA;
+                  }
+               </style>
+            </head>
+            <body>
+               <form name="myForm" onsubmit="return validateForm()">
+                  <p>Votre nom: <input type="text" name="name" class="field-long"/>  <span class="error" id="errorname"></span></p>
+                  <p><input type="submit" value="Envoyer"></p>
+               </form>
+            </body>
+         </html>
+          
+
+          
+    
+       </body>
+    </html>
+    
+
+<!-- <fieldset><legend>Formulaire d'inscription</legend> 
+<form method="post">
+<tr><td>
+<label for="nom">Nom</label> 
+</td>
+</tr>
+<input type="text" id="Nom" required>
+<p></p>
+<label for="prénom">Prénom</label>
+<input type="text" id="Prénom" required>
+<p></p>
+<label for="email">email</label>
+<input type="text" id="email" required>
+<p></p> 
+<label for="message">Message</label>
+<textarea name="Message" id="message" cols="30" rows="10"></textarea>
+
+ <br><br><br>
+
+
+
+<label>Sexe</label>
+<br>
+
+<input type="radio" name="Sexe" value="Homme">Homme
+<input type="radio" name="Sexe" value="Femme">Femme
+</input>
+<br><br>
+
+    <br><br><br>
+    <span id="error"></span>
+    <!-- <br>
+    <button type="submit">Envoyer</button> 
+    
+     </fieldset> --> 
